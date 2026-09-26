@@ -1,3 +1,5 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
 streamlit>=1.36
 pymupdf>=1.24
 pdfplumber>=0.11
