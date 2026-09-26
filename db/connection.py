@@ -70,7 +70,7 @@ def database_status() -> dict[str, Any]:
         # Fail fast with one direct attempt, so a stopped database does not leave the
         # pool retrying in the background.
         import psycopg
-        psycopg.connect(DATABASE_URL, connect_timeout=3).close()
+        psycopg.connect(DATABASE_URL, connect_timeout=15).close()
     except Exception as exc:  # noqa: BLE001
         return {"ok": False, "error": str(exc)}
     try:
