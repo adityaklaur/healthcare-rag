@@ -5,7 +5,7 @@ from contextlib import contextmanager
 from functools import lru_cache
 from typing import Any, Iterator
 
-from config.settings import DATABASE_URL, OWNER_DATABASE_URL
+from config.settings import DATABASE_URL, OWNER_DATABASE_URL        return {"ok": False, "error": f"{type(exc).__name__}: {exc!r}"}
 
 
 def _configure(conn) -> None:
@@ -72,7 +72,7 @@ def database_status() -> dict[str, Any]:
         import psycopg
         psycopg.connect(DATABASE_URL, connect_timeout=15).close()
     except Exception as exc:  # noqa: BLE001
-        return {"ok": False, "error": str(exc)}
+        return {"ok": False, "error": f"{type(exc).__name__}: {exc!r}"}
     try:
         # Counted as 'admin' (sees every collection) inside a role-scoped transaction.
         with role_transaction("admin") as conn:
@@ -83,4 +83,4 @@ def database_status() -> dict[str, Any]:
         return {"ok": True, "documents": int(docs), "chunks": int(chunks),
                 "ingested_at": newest.isoformat() if newest else None}
     except Exception as exc:  # noqa: BLE001 - surfaced in the UI
-        return {"ok": False, "error": str(exc)}
+        return {"ok": False, "error": f"{type(exc).__name__}: {exc!r}"}
