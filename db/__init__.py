@@ -1,0 +1,1 @@
+"""PostgreSQL + pgvector access layer."""

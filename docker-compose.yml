@@ -1,0 +1,22 @@
+# PostgreSQL 16 + pgvector for the Healthcare RAG project.
+#   docker compose up -d          start (first start runs db/init/*.sql)
+#   docker compose down -v        stop and DELETE all data (then up -d again for a clean DB)
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: healthcare-rag-db
+    environment:
+      POSTGRES_USER: rag_owner
+      POSTGRES_PASSWORD: ${DB_OWNER_PASSWORD:-rag_owner_dev}
+      POSTGRES_DB: rag
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d:ro   # 01_schema, 02_security, 03_seed
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rag_owner -d rag"]
+      interval: 5s
+      retries: 20
+volumes:
+  pgdata:

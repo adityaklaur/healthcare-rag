@@ -1,0 +1,220 @@
+documents:
+- file: 01_cdc_isolation_guideline.pdf
+  document_id: CDC-ISO
+  title: CDC Guideline for Isolation Precautions
+  document_type: clinical_guideline
+  version: dataset-copy
+  status: ACTIVE
+  effective_date: null
+  review_due: null
+  supersedes: null
+  superseded_by: null
+  authority_level: 4
+  collection: clinical
+  population:
+  - all
+  owner_contact: Infection Prevention
+  synthetic: false
+  pii_test: false
+  notes: Demo governance metadata only; do not treat ACTIVE as a legal/clinical certification.
+- file: 02_ahrq_fall_prevention_toolkit.pdf
+  document_id: AHRQ-FALLS
+  title: AHRQ Preventing Falls in Hospitals Toolkit
+  document_type: operational_toolkit
+  version: dataset-copy
+  status: ACTIVE
+  effective_date: null
+  review_due: null
+  supersedes: null
+  superseded_by: null
+  authority_level: 4
+  collection: clinical
+  population:
+  - all
+  owner_contact: Patient Safety
+  synthetic: false
+  pii_test: false
+  notes: Demo governance metadata.
+- file: 03_rivaroxaban_prescribing_information.pdf
+  document_id: FORM-RIVA
+  title: Rivaroxaban Prescribing Information
+  document_type: prescribing_information
+  version: dataset-copy
+  status: ACTIVE
+  effective_date: null
+  review_due: null
+  supersedes: null
+  superseded_by: null
+  authority_level: 5
+  collection: formulary
+  population:
+  - adult
+  owner_contact: Pharmacy
+  synthetic: false
+  pii_test: false
+  notes: Use only for the hackathon retrieval demo; verify against the source before
+    any real-world use.
+- file: 04_nice_vte_ng89.pdf
+  document_id: NICE-VTE
+  title: 'NICE NG89: Venous Thromboembolism in Over 16s'
+  document_type: clinical_guideline
+  version: NG89 dataset-copy
+  status: ACTIVE
+  effective_date: null
+  review_due: null
+  supersedes: null
+  superseded_by: null
+  authority_level: 4
+  collection: clinical
+  population:
+  - adult
+  owner_contact: Clinical Governance
+  synthetic: false
+  pii_test: false
+  notes: Demo governance metadata.
+- file: 05_cms_mri_ncd_current.pdf
+  document_id: PAY-MRI
+  title: CMS NCD 220.2 Magnetic Resonance Imaging - Current Dataset Version
+  document_type: payer_policy
+  version: current-dataset-copy
+  status: ACTIVE
+  effective_date: null
+  review_due: null
+  supersedes: PAY-MRI-HIST@1
+  superseded_by: null
+  authority_level: 4
+  collection: billing
+  population:
+  - all
+  owner_contact: Billing / Coverage
+  synthetic: false
+  pii_test: false
+  notes: Use together with the historical copy for version/time-machine demos.
+- file: 06_cms_mri_ncd_historical_v1.pdf
+  document_id: PAY-MRI-HIST
+  title: CMS NCD 220.2 Magnetic Resonance Imaging - Historical Version 1
+  document_type: payer_policy
+  version: '1'
+  status: SUPERSEDED
+  effective_date: '1994-03-22'
+  review_due: null
+  supersedes: null
+  superseded_by: PAY-MRI@current-dataset-copy
+  authority_level: 4
+  collection: billing
+  population:
+  - all
+  owner_contact: Billing / Coverage
+  synthetic: false
+  pii_test: false
+  notes: Historical copy retained for temporal retrieval demonstrations.
+- file: 07_plum_360_infuser_manual.pdf
+  document_id: DEV-PLUM360
+  title: ICU Medical Plum 360 Infuser System Operating Manual
+  document_type: device_manual
+  version: dataset-copy
+  status: ACTIVE
+  effective_date: null
+  review_due: null
+  supersedes: null
+  superseded_by: null
+  authority_level: 3
+  collection: clinical
+  population:
+  - all
+  owner_contact: Clinical Engineering
+  synthetic: false
+  pii_test: false
+  notes: Demo governance metadata.
+- file: 08_fda_infusion_pump_improvement.pdf
+  document_id: RES-FDA-PUMP
+  title: FDA Infusion Pump Improvement Initiative
+  document_type: device_safety_whitepaper
+  version: dataset-copy
+  status: ACTIVE
+  effective_date: null
+  review_due: null
+  supersedes: null
+  superseded_by: null
+  authority_level: 4
+  collection: restricted_research
+  population:
+  - all
+  owner_contact: Research Office
+  synthetic: false
+  pii_test: false
+  notes: ACL is intentionally restricted in this demo to prove pre-LLM access filtering.
+- file: 09_ahrq_match_medication_reconciliation.pdf
+  document_id: AHRQ-MATCH
+  title: AHRQ MATCH Medication Reconciliation Toolkit
+  document_type: operational_toolkit
+  version: dataset-copy
+  status: ACTIVE
+  effective_date: null
+  review_due: null
+  supersedes: null
+  superseded_by: null
+  authority_level: 4
+  collection: clinical
+  population:
+  - all
+  owner_contact: Medication Safety
+  synthetic: false
+  pii_test: false
+  notes: Demo governance metadata.
+- file: 10_nhs_anticoagulant_guideline_adults.pdf
+  document_id: NHS-ANTICOAG
+  title: NHS Clinical Guideline for Anticoagulant Use in Adults
+  document_type: clinical_guideline
+  version: dataset-copy
+  status: ACTIVE
+  effective_date: null
+  review_due: null
+  supersedes: null
+  superseded_by: null
+  authority_level: 4
+  collection: clinical
+  population:
+  - adult
+  owner_contact: Clinical Governance
+  synthetic: false
+  pii_test: false
+  notes: The PDF may contain disclosure wrapper pages before the embedded guideline.
+- file: 11_synthetic_anticoagulation_sop_v2.pdf
+  document_id: SOP-ANTICOAG
+  title: Synthetic Hospital Anticoagulation Management SOP
+  document_type: sop
+  version: '2'
+  status: ACTIVE
+  effective_date: '2024-01-01'
+  review_due: null
+  supersedes: null
+  superseded_by: null
+  authority_level: 3
+  collection: clinical
+  population:
+  - adult
+  owner_contact: Anticoagulation Stewardship
+  synthetic: true
+  pii_test: false
+  notes: Synthetic hackathon document. Contains Demo Drug A = stop 5 days before elective
+    surgery.
+- file: 12_synthetic_perioperative_guideline_v3.pdf
+  document_id: GL-PERIOP
+  title: Synthetic Hospital Perioperative Medicines Guideline
+  document_type: clinical_guideline
+  version: '3'
+  status: ACTIVE
+  effective_date: '2026-01-01'
+  review_due: null
+  supersedes: null
+  superseded_by: null
+  authority_level: 4
+  collection: clinical
+  population:
+  - adult
+  owner_contact: Clinical Governance
+  synthetic: true
+  pii_test: false
+  notes: Synthetic hackathon document. Contains Demo Drug A = stop 3 days before elective
+    surgery.
